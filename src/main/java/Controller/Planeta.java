@@ -2,8 +2,6 @@ package Controller;
 
 public class Planeta {
 
-    
-
     private String name;
     private int quantitySatelites;
     private double mass;
