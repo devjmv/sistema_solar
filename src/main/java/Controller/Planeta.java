@@ -65,5 +65,9 @@ public class Planeta {
         System.out.println("byType de planeta = " + getbyType());
         System.out.println("Es observable = " + isObservable());
     }
+
+    double calcularDensidad() {
+        return mass / volume;
+    }
     
 }

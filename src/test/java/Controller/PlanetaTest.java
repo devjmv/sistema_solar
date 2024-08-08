@@ -32,4 +32,19 @@ public class PlanetaTest {
         assertThat(planet1.getbyType(), is(equalTo(TipoPlaneta.TERRESTRE)));
         assertThat(planet1.isObservable(), is(equalTo(true)));
     }
+
+    @Test
+    public void Calcular_Densidad_del_planeta() {
+        Planeta planet1 = new Planeta(
+            "Tierra",
+            1,
+            5.9736E24,
+            1.08321E12,
+            12742,
+            150000000,
+            TipoPlaneta.TERRESTRE,
+            true
+        );
+        assertThat(planet1.calcularDensidad(), is(equalTo(5.514720137369484E12)));
+    }
 }
