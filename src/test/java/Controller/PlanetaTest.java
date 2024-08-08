@@ -20,9 +20,11 @@ public class PlanetaTest {
             12742,
             150000000,
             TipoPlaneta.TERRESTRE,
-            true
+            true,
+            1,
+            365
         );
-        assertThat(planet1.getClass().getDeclaredFields().length, is(9));
+        assertThat(planet1.getClass().getDeclaredFields().length, is(11));
         assertThat(planet1.getname(), is(equalTo("Tierra")));
         assertThat(planet1.getquantitySatelites(), is(equalTo(1)));
         assertThat(planet1.getmass(), is(equalTo(5.9736E24)));
@@ -31,6 +33,8 @@ public class PlanetaTest {
         assertThat(planet1.getdistanceSun(), is(equalTo(150000000)));
         assertThat(planet1.getbyType(), is(equalTo(TipoPlaneta.TERRESTRE)));
         assertThat(planet1.isObservable(), is(equalTo(true)));
+        assertThat(planet1.getOrbitals(), is(equalTo(1.0)));
+        assertThat(planet1.getRotation(), is(equalTo(365.0)));
     }
 
     @Test
@@ -43,7 +47,9 @@ public class PlanetaTest {
             12742,
             150000000,
             TipoPlaneta.TERRESTRE,
-            true
+            true,
+            1,
+            365
         );
         assertThat(planet1.calcularDensidad(), is(equalTo(5.514720137369484E12)));
     }
@@ -58,7 +64,9 @@ public class PlanetaTest {
             12742,
             150000000,
             TipoPlaneta.TERRESTRE,
-            true
+            true,
+            1,
+            365
         );
         assertThat(planet1.isOuterPlanet(), is(equalTo(false)));
     }

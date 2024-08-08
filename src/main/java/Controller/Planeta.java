@@ -12,9 +12,11 @@ public class Planeta {
     private int distanceSun;
     private TipoPlaneta byType;
     private boolean isObservable;
+    private double orbitals;
+    private double rotation;
 
     public Planeta(String name, int quantitySatelites, double mass, double volume, int diameter,
-            int distanceSun, TipoPlaneta byType, boolean isObservable) {
+            int distanceSun, TipoPlaneta byType, boolean isObservable, double orbitals, double rotation) {
         this.name = name;
         this.quantitySatelites = quantitySatelites;
         this.mass = mass;
@@ -23,6 +25,8 @@ public class Planeta {
         this.distanceSun = distanceSun;
         this.byType = byType;
         this.isObservable = isObservable;
+        this.orbitals = orbitals;
+        this.rotation = rotation;
     }
 
     public String getname() {
@@ -57,6 +61,14 @@ public class Planeta {
         return isObservable;
     }
 
+    public double getOrbitals() {
+        return orbitals;
+    }
+
+    public double getRotation() {
+        return rotation;
+    }
+
     public void printData() {
         System.out.println("Nombre del planeta = " + getname());
         System.out.println("Cantidad de satélites = " + getquantitySatelites());
@@ -66,6 +78,8 @@ public class Planeta {
         System.out.println("Distancia al sol = " + getdistanceSun());
         System.out.println("byType de planeta = " + getbyType());
         System.out.println("Es observable = " + isObservable());
+        System.out.println("La Orbita en años = " + getOrbitals());
+        System.out.println("La rotacion en días = " + getRotation());
     }
 
     double calcularDensidad() {
@@ -88,7 +102,9 @@ public class Planeta {
             12742,
             150000000,
             TipoPlaneta.TERRESTRE,
-            true
+            true,
+            1,
+            365
         );
         planet1.printData();
         System.out.println("Densidad del planeta = " + planet1.calcularDensidad());
@@ -102,7 +118,9 @@ public class Planeta {
             139820,
             750000000,
             TipoPlaneta.GASEOSO,
-            true
+            true,
+            11.84,
+            4328.9
         );
         planet2.printData();
         System.out.println("Densidad del planeta = " + planet2.calcularDensidad());
