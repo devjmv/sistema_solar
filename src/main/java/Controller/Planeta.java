@@ -55,4 +55,15 @@ public class Planeta {
         return isObservable;
     }
 
+    public void printData() {
+        System.out.println("Nombre del planeta = " + getname());
+        System.out.println("Cantidad de satélites = " + getquantitySatelites());
+        System.out.println("Masa del planeta = " + getmass());
+        System.out.println("volume del planeta = " + getvolume());
+        System.out.println("Diámetro del planeta = " + getdiameter());
+        System.out.println("Distancia al sol = " + getdistanceSun());
+        System.out.println("byType de planeta = " + getbyType());
+        System.out.println("Es observable = " + isObservable());
+    }
+    
 }
