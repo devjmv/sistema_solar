@@ -8,6 +8,9 @@ import java.util.Collections;
 
 import org.junit.jupiter.api.Test;
 
+import com.sistema.solar.Controller.Planeta;
+import com.sistema.solar.Controller.TipoPlaneta;
+
 public class PlanetaTest {
 
     @Test
