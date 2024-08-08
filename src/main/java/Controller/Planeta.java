@@ -2,6 +2,8 @@ package Controller;
 
 public class Planeta {
 
+    private final float LIMITE = (float) (149597870 * 3.4);
+
     private String name;
     private int quantitySatelites;
     private double mass;
@@ -69,5 +71,11 @@ public class Planeta {
     double calcularDensidad() {
         return mass / volume;
     }
-    
+
+    boolean isOuterPlanet() {
+        if (distanceSun > LIMITE)
+            return true;
+        else
+            return false;
+    }
 }

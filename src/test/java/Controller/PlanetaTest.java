@@ -22,7 +22,7 @@ public class PlanetaTest {
             TipoPlaneta.TERRESTRE,
             true
         );
-        assertThat(planet1.getClass().getDeclaredFields().length, is(8));
+        assertThat(planet1.getClass().getDeclaredFields().length, is(9));
         assertThat(planet1.getname(), is(equalTo("Tierra")));
         assertThat(planet1.getquantitySatelites(), is(equalTo(1)));
         assertThat(planet1.getmass(), is(equalTo(5.9736E24)));
@@ -46,5 +46,20 @@ public class PlanetaTest {
             true
         );
         assertThat(planet1.calcularDensidad(), is(equalTo(5.514720137369484E12)));
+    }
+
+    @Test
+    public void Determinar_si_un_planeta_del_sistema_solar() {
+        Planeta planet1 = new Planeta(
+            "Tierra",
+            1,
+            5.9736E24,
+            1.08321E12,
+            12742,
+            150000000,
+            TipoPlaneta.TERRESTRE,
+            true
+        );
+        assertThat(planet1.isOuterPlanet(), is(equalTo(false)));
     }
 }
